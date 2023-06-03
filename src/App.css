@@ -1,38 +1,120 @@
-.App {
+html {
+ font-size: 10px;
+}
+*{
+  box-sizing: border-box;
+}
+body 
+{
+  padding: 0;
+  margin: 0;
+  background-color: rgb(244, 244, 244);
+  color: #333;
+}
+p{
+  font-size: 1.6rem;
+}
+small 
+{
+  font-size: 1.2rem;
+}
+.container 
+{
+  margin: 0 auto;
+  max-width: 1000px;
+  padding: 40px;
+  padding-bottom: 100px;
+}
+.title 
+{
+  font-size: 4.4rem;
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.form
+{
+  display: grid;
 }
+.label
+{
+  text-transform: uppercase;
+  font-size: 1.4rem;
+}
+.input
+{
+  font-size: 1.6rem;
+  line-height: 2.8rem;
+  padding: .5em 2em;
+  border-radius: 20px;
+  border: 1px solid #cccc;
+  margin-bottom: 1em;
+}
+.input:focus,
+.button:focus
+{
+  outline: unset;
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+ 
+}
+.button 
+{
+  padding: .6em 2em;
+  font-size: 1.6rem;
+  border-radius: 20px;
+  border: 1px solid #cccc;
+  background-color: rgba(0, 0, 0, .75);
+  transition: background 250ms;
+  cursor: pointer;
+  color: #fff;
+}
+.button:hover
+{
+  background-color: rgba(0, 0, 0, .85);
+}
+.movies-list
+{
+  margin-top: 3.5rem;
+  display: grid;
+  gap: 2em;
+}
+.movie 
+{
+  background-color: #fff;
+  box-shadow: 0px 10px 15px -3px rgba(0,0,0,0.1);
+}
+.movie-info
+{
+  padding: 1em;
+}
+.movie-poster
+{
+  max-width: 100%;
+  display: block;
+}
+footer 
+{
+  background-color: #333;
+  color: #fff;
+  padding: 2.5em;
+  text-align: center;
+  margin-top: 2em;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+@media(min-width:786px)
+{
+  .form
+  {
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
   }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  .input 
+  {
+    margin-bottom: 0;
   }
-  to {
-    transform: rotate(360deg);
-  }
+  .movies-list
+{
+  grid-template-columns: repeat(3,1fr);
+  gap: 2em;
+}
 }
